@@ -1,1 +1,146 @@
-谢谢
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>叮叮</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'app-blue': '#3e7bfa',
+                        'app-green': '#4cd964',
+                        'app-bg': '#f8f8f8',
+                        'app-gold': '#ffd700',
+                        'app-gold-dark': '#e6c200',
+                    },
+                    fontFamily: {
+                        sans: ['Arial', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'gold': '0 4px 6px -1px rgba(255, 215, 0, 0.2), 0 2px 4px -1px rgba(255, 215, 0, 0.1)',
+                        'gold-lg': '0 10px 15px -3px rgba(255, 215, 0, 0.2), 0 4px 6px -2px rgba(255, 215, 0, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .btn-shadow {
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .card-shadow {
+                box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.03);
+            }
+        }
+    </style>
+    
+    <style>
+        body {
+            background-color: #fefefe;
+            background-image: linear-gradient(to bottom right, rgba(255, 215, 0, 0.05), rgba(255, 248, 225, 0.3));
+            background-attachment: fixed;
+        }
+        
+        .download-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        
+        .contact-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(76,217,100,0.3);
+        }
+        
+        .app-logo {
+            filter: drop-shadow(0 4px 3px rgba(0,0,0,0.07));
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        .animate-blink {
+            animation: blink 1.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-md">
+        <!-- Logo Section -->
+        <div class="flex flex-col items-center mb-8">
+            <div class="w-full aspect-[3/2] overflow-hidden">
+                <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/92befce9bbe14c1fba634b817851704c.jpg~tplv-a9rns2rl98-24:720:720.image?rcl=202512120026147EADF6A50EFFA2F9F9E8&rk3s=8e244e95&rrcfp=8a172a1a&x-expires=1766075174&x-signature=WG3hqOyJht6CQ0QTFCJhok3xOsA%3D" 
+                     alt="叮叮乐玩" 
+                     class="w-full h-full object-contain app-logo">
+            </div>
+            <p class="text-gray-800 text-base mt-4 text-center" style="font-family: 'SimHei', 'Heiti TC', '黑体', sans-serif;">
+                在浏览器中搜<span class="text-red-600 text-2xl font-black">"叮叮.VIP"</span>就能找到我们
+            </p>
+        </div>
+        
+        <!-- Description Section -->
+        <div class="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-6 mb-6 border border-amber-100 card-shadow">
+            <p class="text-amber-900 text-sm leading-relaxed font-medium" style="font-family: 'SimHei', 'Heiti TC', '黑体', sans-serif;">
+                叮叮乐玩是一款线上推币app，24小时在线！高清画面！有丰厚的房间奖，中了JP奖和全盘奖还有额外惊喜，详情见APP滚动广告页！
+            </p>
+        </div>
+        
+        <!-- Reward Section -->
+        <div class="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-6 mb-6 border border-amber-100 card-shadow">
+            <p class="text-amber-800 text-lg font-bold text-center animate-blink">
+                添加客服，领取10000体验金币
+            </p>
+        </div>
+        
+        <!-- Download Section -->
+        <div class="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-6 mb-8 border border-amber-100 card-shadow">
+            <h2 class="text-center text-amber-800 font-bold mb-4 text-base">点击下载APP</h2>
+            
+            <div class="flex space-x-3">
+                <a href="https://叮叮乐玩.VIP" class="flex-1" onclick="event.preventDefault(); window.open('https://叮叮乐玩.VIP', '_blank');">
+                    <button class="w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-white py-3 px-4 rounded-xl download-btn btn-shadow flex flex-col items-center justify-center border border-amber-600">
+                        <span class="text-sm font-bold">叮叮安卓</span>
+                    </button>
+                </a>
+                
+                <a href="https://叮当乐玩.VIP" class="flex-1" onclick="event.preventDefault(); window.open('https://叮当乐玩.VIP', '_blank');">
+                    <button class="w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-white py-3 px-4 rounded-xl download-btn btn-shadow flex flex-col items-center justify-center border border-amber-600">
+                        <span class="text-sm font-bold">叮叮苹果</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="flex justify-center">
+            <a href="https://work.weixin.qq.com/kfid/kfcfc9733211b7aac26" class="w-full max-w-xs" onclick="event.preventDefault(); window.open('https://work.weixin.qq.com/kfid/kfcfc9733211b7aac26', '_blank');">
+                <button class="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white py-3 px-4 rounded-xl contact-btn btn-shadow flex items-center justify-center border border-green-600">
+                    <i class="fa fa-weixin mr-2"></i>
+                    <span class="text-sm font-bold">点击添加客服微信</span>
+                </button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
